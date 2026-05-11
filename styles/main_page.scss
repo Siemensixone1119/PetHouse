@@ -1,0 +1,27 @@
+@use "./variables" as *;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+    font-family: $font-title;
+}
+
+p{
+    font-family: $base-font;
+}
+
+.hero{
+    background-color: $color-brand;
+    color: $color-input-bg;
+    display: flex;
+    
+}
+
+.hero_img img{
+    width: 440px;
+    height: 300px;
+}
+
