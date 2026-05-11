@@ -1,5 +1,6 @@
 @use "./variables" as *;
 
+<<<<<<< HEAD
 h1,
 h2,
 h3,
@@ -19,6 +20,8 @@ p{
 }
 
 
+=======
+>>>>>>> main
 *,
 *::before,
 *::after {
@@ -27,7 +30,11 @@ p{
 
 html,
 body {
+<<<<<<< HEAD
   height: 100%;
+=======
+  height: 100vh;
+>>>>>>> main
   margin: 0;
   padding: 0;
 }
@@ -48,7 +55,10 @@ body {
   overscroll-behavior-y: none;
   background-color: $color-page-bg;
   position: relative;
+<<<<<<< HEAD
   margin-bottom: 60px;
+=======
+>>>>>>> main
 }
 
 h1,
@@ -116,3 +126,10 @@ input[type="search"]::-webkit-search-results-decoration {
   padding: 0 15px;
   box-sizing: border-box;
 }
+<<<<<<< HEAD
+=======
+
+main{
+  height: calc(100% - 192px);
+}
+>>>>>>> main

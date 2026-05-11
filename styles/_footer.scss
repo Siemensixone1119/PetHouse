@@ -1,0 +1,21 @@
+@use "./variables" as *;
+
+.footer {
+
+  background-color: $color-brand;
+  color: $color-page-bg;
+
+  .logo{
+    &__icon{
+      fill: $color-page-bg;
+    }
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    padding: 20px 15px;
+  }
+}

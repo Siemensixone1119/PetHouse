@@ -1,0 +1,45 @@
+@use "./variables" as *;
+
+.header{
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   padding: 20px 15px;
+}
+
+.logo {
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+
+  &__icon {
+    width: 56px;
+    height: 56px;
+    transform: rotate(-45deg);
+    line-height: 0;
+  }
+
+  &__text {
+    font-size: 36px;
+    font-family: $font-title;
+  }
+}
+
+.nav{
+  &__list{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: auto;
+    gap: 25px;
+  }
+
+  &__text{
+    font-size: 16px;
+    font-family: $font-title;
+  }
+
+  &__text:hover{
+    text-decoration: underline;
+  }
+}

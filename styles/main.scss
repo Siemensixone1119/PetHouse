@@ -1,4 +1,13 @@
 @use "./reset";
+<<<<<<< HEAD
 @use "./variables" as *;
 @use "./fonts";
 @use "./base";
+=======
+@use "./variables";
+@use "./fonts";
+@use "./base";
+
+@use "./header";
+@use "./footer";
+>>>>>>> main
