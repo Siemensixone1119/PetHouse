@@ -1,0 +1,68 @@
+@use "./variables.scss" as *;
+
+.header{
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   padding: 20px 80px;
+   background-color: $color-brown-darkest;
+   color: $color-gold;
+}
+
+.logo {
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+
+  &__icon {
+    width: 56px;
+    height: 56px;
+    transform: rotate(-45deg);
+    line-height: 0;
+    fill: $color-gold;
+  }
+
+  &__text {
+    font-size: 36px;
+    font-family: $font-title;
+  }
+}
+
+.nav{
+  &__list{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: auto;
+    gap: 25px;
+  }
+
+  &__text{
+    font-size: 16px;
+    font-family: $font-title;
+  }
+
+  &__text:hover{
+    text-decoration: underline;
+  }
+}
+
+.footer {
+
+  background-color: $color-brown-darkest;
+  color: $color-gold;
+
+  .logo{
+    &__icon{
+      fill: $color-gold;
+    }
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    padding: 20px 80px;
+  }
+}

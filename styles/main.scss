@@ -1,7 +1,6 @@
 @use "./reset";
-@use "./variables";
+@use "./variables" as *;
 @use "./fonts";
 @use "./base";
 
-@use "./header";
-@use "./footer";
+

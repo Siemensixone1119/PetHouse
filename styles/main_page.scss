@@ -1,0 +1,172 @@
+@use "./variables" as *;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+    font-family: $font-title;
+}
+
+p{
+    font-family: $base-font;
+}
+
+.hero{
+    background: $gradient-hero;
+    color: $color-brown-mid;
+    padding: 20px 20px 0px 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+    
+}
+
+.hero_img img{
+    width: 660px;
+    height: 450px;
+}
+
+h1{
+    color: $color-brown-mid;
+    font-size: 52px;
+    font-weight: 700;
+    line-height: 1.15;
+    margin-bottom: 20px;
+}
+
+.flexx p{
+    color: $color-brown-light;
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 30px;
+    line-height: 1.25;
+}
+
+.join_us {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 15px 0;
+}
+
+.join_us a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 160px;
+  padding: 14px 24px;
+
+  border-radius: 12px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 700;
+
+  transition: 0.3s ease;
+}
+
+.join_us a:first-child {
+  background-color: $color-gold;
+  color: $color-brown-dark;
+  border: 1px solid $color-gold;
+}
+
+.join_us a:first-child:hover {
+  background-color: transparent;
+  color: $color-gold;
+}
+
+.join_us a:last-child {
+  background-color: transparent;
+  color: $color-brown-light;
+  border: 1px solid $color-brown-light;
+}
+
+.join_us a:last-child:hover {
+  background-color: $color-brown-light;
+  color: $color-brown-dark;
+}
+
+a:hover{
+    font-weight: 700;
+    color: $color-brown-dark;
+}
+
+.differences{
+    padding: 40px 80px;
+}
+
+.differences ul {
+  display: flex;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.differences li {
+  width: 100%;
+  padding: 20px 30px;
+  border: 1px solid $color-bg-border;
+  border-radius: 12px;
+  background-color: #fff;
+}
+
+h2{
+    font-size: 36px;
+    font-weight: 700;
+    color: $color-brown-muted;
+    margin-bottom: 20px;
+}
+
+h3{
+    font-size: 24px;
+    font-weight: 700;
+    color: $color-brown-muted;
+    margin-bottom: 5px;
+}
+
+h4{
+    font-size: 50px;
+    margin-bottom: 12px;
+}
+
+.differences p{
+    color: #776c5e;
+    font-size: 14px;
+}
+
+.news{
+    padding: 40px 80px;
+    background-color: #f2e4d0;
+}
+
+.news ul{
+  display: flex;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.news li {
+  width: 100%;
+  padding: 20px 30px;
+  border: 1px solid #e5d8ca;
+  border-radius: 12px;
+  background-color: #fff;
+}
+
+.news h4{
+  display: inline-block;
+  width: fit-content;
+  background-color: #bd720b;
+  border-radius: 12px;
+  padding: 10px 15px;
+  font-size: 16px;
+  font-weight: 700;
+  color: $color-brown-muted;
+}
