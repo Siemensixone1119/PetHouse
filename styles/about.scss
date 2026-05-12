@@ -1,68 +1,200 @@
-@use "./variables.scss" as *;
+@use "./variables" as *;
 
-.header{
-   display: flex;
-   align-items: center;
-   justify-content: space-between;
-   padding: 20px 80px;
-   background-color: $color-brown-darkest;
-   color: $color-gold;
+.about_project {
+  background: $gradient-about;
+  color: $color-brown-mid;
+  padding: 20px 80px 0px 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  p {
+    color: $color-brown-light;
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 30px;
+    line-height: 1.25;
+  }
 }
 
-.logo {
-  display: flex;
-  align-items: flex-end;
-  gap: 8px;
+.about_img img {
+  width: 570px;
+  height: 450px;
+}
+
+h1 {
+  font-family: $font-title;
+  color: $color-gold;
+  font-size: 52px;
+  font-weight: 700;
+  line-height: 1.15;
+  margin-bottom: 20px;
+}
+
+.inform {
+  padding: 40px 80px;
+  text-align: center;
+
+  h2 {
+    font-family: $font-title;
+    font-weight: 700;
+    color: $color-brown-muted;
+    font-size: 32px;
+  }
+
+  h4 {
+    font-family: $base-font;
+    font-size: 20px;
+    color: $color-brown-muted;
+  }
+
+  ul {
+    display: flex;
+    gap: 85px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  li {
+    width: 100%;
+    padding: 30px 30px;
+    border: 1px solid $color-bg-border;
+    border-radius: 12px;
+    background-color: #fff;
+  }
+}
+
+.our_mission {
+  padding: 20px 80px;
+
+  h2 {
+    font-family: $font-title;
+    font-weight: 700;
+    color: $color-brown-muted;
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+
+  p {
+    color: $color-brown-faint;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 1.25;
+  }
+}
+
+.cards {
+  padding: 40px 0;
+
+  .cards__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px 24px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  .cards__item {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 22px 28px;
+    background-color: #fff;
+    border: 1px solid $color-bg-border;
+    border-radius: 12px;
+  }
 
   &__icon {
-    width: 56px;
-    height: 56px;
-    transform: rotate(-45deg);
-    line-height: 0;
-    fill: $color-gold;
+    flex-shrink: 0;
+    font-size: 38px;
+    line-height: 1;
+  }
+
+  &__title {
+    margin: 0 0 6px;
+    font-size: 20px;
+    font-weight: 700;
+    color: $color-brown-muted;
   }
 
   &__text {
-    font-size: 36px;
-    font-family: $font-title;
-  }
-}
-
-.nav{
-  &__list{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-left: auto;
-    gap: 25px;
-  }
-
-  &__text{
+    margin: 0;
     font-size: 16px;
-    font-family: $font-title;
-  }
-
-  &__text:hover{
-    text-decoration: underline;
+    line-height: 1.4;
+    color: $color-brown-light;
   }
 }
 
-.footer {
+.faq {
+  padding: 40px 80px;
 
-  background-color: $color-brown-darkest;
-  color: $color-gold;
-
-  .logo{
-    &__icon{
-      fill: $color-gold;
-    }
+  &__title {
+    margin-bottom: 24px;
+    font-size: 36px;
+    font-weight: 700;
+    color: $color-brown-muted;
+    font-family: $font-title;
   }
 
-  .container {
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__item {
+    background-color: #fff;
+    border: 1px solid $color-bg-border;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+  }
+
+  &__question {
+    width: 100%;
+    padding: 24px 28px;
     display: flex;
     align-items: center;
-    flex-direction: row-reverse;
     justify-content: space-between;
-    padding: 20px 80px;
+    gap: 20px;
+    background-color: #ffffff;
+    border: none;
+    cursor: pointer;
+    font-size: 28px;
+    font-weight: 600;
+    color: $color-brown-faint;
+    text-align: left;
+  }
+
+  &__icon {
+    flex-shrink: 0;
+    font-size: 20px;
+    transition: transform 0.3s ease;
+  }
+
+  &__answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+    padding: 0 28px;
+    border-top: 1px solid #e2d6c8;
+  }
+
+  &__answer p {
+    margin: 0;
+    padding: 20px 0 24px;
+    font-size: 24px;
+    line-height: 1.5;
+    color: #7a685c;
+  }
+
+  &__item.active &__answer {
+    max-height: 200px;
+  }
+
+  &__item.active &__icon {
+    transform: rotate(180deg);
   }
 }
