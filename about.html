@@ -52,6 +52,10 @@
             </span>
           </a>
         </li>
+        <li>
+                <button class="join_us__lost-button" type="button" id="openLostModal">
+            Сообщить о пропаже
+          </button></li>
       </ul>
     </nav>
   </header>
@@ -246,6 +250,91 @@
       </nav>
     </div>
   </footer>
+  <div class="modal" id="lostModal">
+      <div class="modal__overlay" id="closeLostModal"></div>
+
+      <div class="modal__content">
+        <button class="modal__close" type="button" id="modalCloseButton">
+          ×
+        </button>
+
+        <h2 class="modal__title">Сообщить о пропаже</h2>
+
+        <form class="lost-form" id="lostPetForm">
+          <div class="lost-form__field">
+            <label for="owner">Ваше имя</label>
+            <input
+              type="text"
+              id="owner"
+              name="owner"
+              placeholder="Например, Анна"
+            />
+            <span class="lost-form__error" data-error="owner"></span>
+          </div>
+
+          <div class="lost-form__field">
+            <label for="pet">Вид питомца</label>
+            <input
+              type="text"
+              id="pet"
+              name="pet"
+              placeholder="Например, кошка"
+            />
+            <span class="lost-form__error" data-error="pet"></span>
+          </div>
+
+          <div class="lost-form__field">
+            <label for="petName">Кличка питомца</label>
+            <input
+              type="text"
+              id="petName"
+              name="petName"
+              placeholder="Например, Муся"
+            />
+            <span class="lost-form__error" data-error="petName"></span>
+          </div>
+
+          <div class="lost-form__field">
+            <label for="city">Город</label>
+            <input
+              type="text"
+              id="city"
+              name="city"
+              placeholder="Например, Пенза"
+            />
+            <span class="lost-form__error" data-error="city"></span>
+          </div>
+
+          <div class="lost-form__field">
+            <label for="contact">Контакт</label>
+            <input
+              type="text"
+              id="contact"
+              name="contact"
+              placeholder="Телефон или email"
+            />
+            <span class="lost-form__error" data-error="contact"></span>
+          </div>
+
+          <div class="lost-form__field">
+            <label for="description">Описание</label>
+            <textarea
+              id="description"
+              name="description"
+              placeholder="Опишите питомца и место пропажи"
+            ></textarea>
+            <span class="lost-form__error" data-error="description"></span>
+          </div>
+
+          <p class="lost-form__message" id="lostFormMessage"></p>
+
+          <button class="lost-form__button" type="submit">
+            Отправить объявление
+          </button>
+        </form>
+      </div>
+    </div>
+    <script src="./scripts/lost-pets.js"></script>
 </body>
 
 </html>
