@@ -1,0 +1,109 @@
+@use "./variables" as *;
+
+.register {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+
+    &__sidebar-bcg {
+        background: $gradient-sidebar;
+        display: flex;
+        padding: 15%;
+    }
+
+    &__sidebar {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        color: $color-gold;
+    }
+
+    &__sidebar-title {
+        font-family: $font-title;
+        font-size: 46px;
+    }
+
+    &__sidebar-subtitle {
+        font-size: 16px;
+    }
+
+    &__features {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    &__features-item {
+        font-size: 16px;
+    }
+
+    &__features-item::before {
+        content: "✓";
+        color: $color-brown-dark;
+        background: $color-gold;
+        font-size: 18px;
+        line-height: 0;
+        padding: 0 5px;
+        border-radius: 50%;
+        margin-right: 15px;
+    }
+
+    &__content {
+        padding: 2% 5%;
+    }
+
+    &__title {
+        font-size: 38px;
+        font-family: $font-title;
+    }
+
+    &__description {
+        font-size: 18px;
+    }
+
+    &__form {
+        margin-top: 5%;
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    &__field {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    &__label {
+        font-size: 16px;
+    }
+
+    &__input {
+        padding: 10px 15px;
+        outline: none;
+        border-radius: 8px;
+        border: 2px solid $color-bg-border;
+    }
+
+    &__submit {
+        padding: 10px 15px;
+        outline: none;
+        border-radius: 8px;
+        background-color: $color-bg-border;
+        border: 1px solid $color-brown-mid;
+        color: $color-brown-mid;
+        font-size: 18px;
+        font-weight: 600;
+    }
+
+    &__footer {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+
+    &__link {
+        font-weight: 600;
+        font-size: 15px;
+    }
+}

@@ -24,7 +24,7 @@ body {
   font-size: 14px;
   line-height: 1.4;
   font-weight: 400;
-  color: $color-text;
+  color: $color-brown-darkest;
   max-width: 100%;
   overscroll-behavior-y: none;
   background-color: $color-page-bg;
@@ -93,10 +93,10 @@ input[type="search"]::-webkit-search-results-decoration {
 .container {
   width: 100%;
   margin: 0 auto;
-  padding: 0 15px;
+  padding: 0 80px;
   box-sizing: border-box;
 }
 
 main{
-  height: calc(100% - 192px);
+  min-height: calc(100% - 192px);
 }

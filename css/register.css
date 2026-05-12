@@ -1,0 +1,91 @@
+@charset "UTF-8";
+.register {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+.register__sidebar-bcg {
+  background: linear-gradient(160deg, #6B3F2A, #3D2B1F);
+  display: flex;
+  padding: 15%;
+}
+.register__sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  color: #F5C47A;
+}
+.register__sidebar-title {
+  font-family: "GeorgiaCustom", Georgia, serif;
+  font-size: 46px;
+}
+.register__sidebar-subtitle {
+  font-size: 16px;
+}
+.register__features {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.register__features-item {
+  font-size: 16px;
+}
+.register__features-item::before {
+  content: "✓";
+  color: #6B3F2A;
+  background: #F5C47A;
+  font-size: 18px;
+  line-height: 0;
+  padding: 0 5px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+.register__content {
+  padding: 2% 5%;
+}
+.register__title {
+  font-size: 38px;
+  font-family: "GeorgiaCustom", Georgia, serif;
+}
+.register__description {
+  font-size: 18px;
+}
+.register__form {
+  margin-top: 5%;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.register__field {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.register__label {
+  font-size: 16px;
+}
+.register__input {
+  padding: 10px 15px;
+  outline: none;
+  border-radius: 8px;
+  border: 2px solid #e8d5c0;
+}
+.register__submit {
+  padding: 10px 15px;
+  outline: none;
+  border-radius: 8px;
+  background-color: #e8d5c0;
+  border: 1px solid #8B5E3C;
+  color: #8B5E3C;
+  font-size: 18px;
+  font-weight: 600;
+}
+.register__footer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+.register__link {
+  font-weight: 600;
+  font-size: 15px;
+}
