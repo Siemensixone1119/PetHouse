@@ -1,14 +1,14 @@
 $base-font: 'Nunito', Arial, sans-serif;
 $font-title: 'GeorgiaCustom', Georgia, serif;
 
-$color-page-bg: #f9ede1;
-$color-light-bg: #fefaf5;
-$color-control-bg: #fdf5ec;
-$color-line: #e0c9af;
-$color-primary: #ea8386;
-$color-brand: #9f6749;
-$color-text: #270f0A;
-$color-input-bg: #fefdfa;
+// $color-page-bg: #f9ede1;
+// $color-light-bg: #fefaf5;
+// $color-control-bg: #fdf5ec;
+// $color-line: #e0c9af;
+// $color-primary: #ea8386;
+// $color-brand: #9f6749;
+// $color-text: #270f0A;
+// $color-input-bg: #fefdfa;
 
 $breakpoint-sm: 576px;
 $breakpoint-md: 720px;
@@ -16,3 +16,61 @@ $breakpoint-lg: 960px;
 $breakpoint-xl: 1024px;
 
 $container-padding: 20px;
+
+
+// ============================================
+// ПитомецДом — цветовая палитра
+// ============================================
+
+// Фоны
+$color-bg-page:        #FFF8F0;   // основной фон страниц
+$color-bg-white:       #FFFFFF;   // карточки, формы
+$color-bg-warm:        #FFF0DE;   // секция новостей, FAQ
+$color-bg-border:      #e8d5c0;   // границы карточек
+
+// Коричневые (основные)
+$color-brown-darkest:  #3D2B1F;   // шапка, футер, кнопки
+$color-brown-dark:     #6B3F2A;   // hover, боковая панель
+$color-brown-mid:      #8B5E3C;   // акцент, градиент
+$color-brown-light:    #D4B896;   // вторичный текст, ссылки
+$color-brown-muted:    #7A6050;   // подписи, плейсхолдеры
+$color-brown-faint:    #4A3020;   // основной текст на светлом
+
+// Золотой акцент
+$color-gold:           #F5C47A;   // логотип, кнопки, звёзды
+$color-gold-bg:        #F5C47A20; // полупрозрачный фон иконок
+$color-gold-border:    #F5C47A50; // полупрозрачная рамка
+
+// Семантические
+$color-error:          #c0392b;   // ошибки валидации
+
+// ============================================
+// Градиенты
+// ============================================
+
+// Главный герой (index.html)
+$gradient-hero: linear-gradient(
+  135deg,
+  #3D2B1F 0%,
+  #6B3F2A 60%,
+  #8B5E3C 100%
+);
+
+// Боковая панель регистрации (register.html)
+$gradient-sidebar: linear-gradient(
+  160deg,
+  #6B3F2A,
+  #3D2B1F
+);
+
+// О проекте (about.html)
+$gradient-about: linear-gradient(
+  120deg,
+  #3D2B1F,
+  #8B5E3C
+);
+
+// Плашки контактов и отзывов (однородный)
+$color-section-header:  #6B3F2A;  // без градиента, сплошной
+
+

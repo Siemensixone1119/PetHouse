@@ -2,12 +2,12 @@
 
 .footer {
 
-  background-color: $color-brand;
-  color: $color-page-bg;
+  background-color: $color-brown-darkest;
+  color: $color-gold;
 
   .logo{
     &__icon{
-      fill: $color-page-bg;
+      fill: $color-gold;
     }
   }
 
@@ -16,6 +16,6 @@
     align-items: center;
     flex-direction: row-reverse;
     justify-content: space-between;
-    padding: 20px 15px;
+    padding: 20px 80px;
   }
 }

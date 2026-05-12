@@ -14,8 +14,8 @@ p{
 }
 
 .hero{
-    background-color: $color-brand;
-    color: $color-input-bg;
+    background: $gradient-hero;
+    color: $color-brown-mid;
     padding: 20px 20px 0px 80px;
     display: flex;
     justify-content: space-between;
@@ -30,7 +30,7 @@ p{
 }
 
 h1{
-    color: #f2b571;
+    color: $color-brown-mid;
     font-size: 52px;
     font-weight: 700;
     line-height: 1.15;
@@ -38,23 +38,61 @@ h1{
 }
 
 .flexx p{
-    color: #e0c9af;
+    color: $color-brown-light;
     font-size: 18px;
     font-weight: 400;
     margin-bottom: 30px;
     line-height: 1.25;
 }
 
-.join_us{
-    display: flex;
-    align-items: center;
-    gap: 50px;
-    padding: 15px;
-    font-size: 16px;
+.join_us {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 15px 0;
+}
+
+.join_us a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 160px;
+  padding: 14px 24px;
+
+  border-radius: 12px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 700;
+
+  transition: 0.3s ease;
+}
+
+.join_us a:first-child {
+  background-color: $color-gold;
+  color: $color-brown-dark;
+  border: 1px solid $color-gold;
+}
+
+.join_us a:first-child:hover {
+  background-color: transparent;
+  color: $color-gold;
+}
+
+.join_us a:last-child {
+  background-color: transparent;
+  color: $color-brown-light;
+  border: 1px solid $color-brown-light;
+}
+
+.join_us a:last-child:hover {
+  background-color: $color-brown-light;
+  color: $color-brown-dark;
 }
 
 a:hover{
     font-weight: 700;
+    color: $color-brown-dark;
 }
 
 .differences{
@@ -72,7 +110,7 @@ a:hover{
 .differences li {
   width: 100%;
   padding: 20px 30px;
-  border: 1px solid #e5d8ca;
+  border: 1px solid $color-bg-border;
   border-radius: 12px;
   background-color: #fff;
 }
@@ -80,14 +118,14 @@ a:hover{
 h2{
     font-size: 36px;
     font-weight: 700;
-    color: $color-brand;
+    color: $color-brown-muted;
     margin-bottom: 20px;
 }
 
 h3{
     font-size: 24px;
     font-weight: 700;
-    color: $color-brand;
+    color: $color-brown-muted;
     margin-bottom: 5px;
 }
 
@@ -126,9 +164,9 @@ h4{
   display: inline-block;
   width: fit-content;
   background-color: #bd720b;
-  border: 1px solid #000;
   border-radius: 12px;
   padding: 10px 15px;
   font-size: 16px;
   font-weight: 700;
+  color: $color-brown-muted;
 }

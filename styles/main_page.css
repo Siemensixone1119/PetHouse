@@ -12,8 +12,8 @@ p {
 }
 
 .hero {
-  background-color: #9f6749;
-  color: #fefdfa;
+  background: linear-gradient(135deg, #3D2B1F 0%, #6B3F2A 60%, #8B5E3C 100%);
+  color: #8B5E3C;
   padding: 20px 20px 0px 80px;
   display: flex;
   justify-content: space-between;
@@ -27,7 +27,7 @@ p {
 }
 
 h1 {
-  color: #f2b571;
+  color: #8B5E3C;
   font-size: 52px;
   font-weight: 700;
   line-height: 1.15;
@@ -35,7 +35,7 @@ h1 {
 }
 
 .flexx p {
-  color: #e0c9af;
+  color: #D4B896;
   font-size: 18px;
   font-weight: 400;
   margin-bottom: 30px;
@@ -45,13 +45,48 @@ h1 {
 .join_us {
   display: flex;
   align-items: center;
-  gap: 50px;
-  padding: 15px;
+  gap: 24px;
+  padding: 15px 0;
+}
+
+.join_us a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 160px;
+  padding: 14px 24px;
+  border-radius: 12px;
+  text-decoration: none;
   font-size: 16px;
+  font-weight: 700;
+  transition: 0.3s ease;
+}
+
+.join_us a:first-child {
+  background-color: #F5C47A;
+  color: #6B3F2A;
+  border: 1px solid #F5C47A;
+}
+
+.join_us a:first-child:hover {
+  background-color: transparent;
+  color: #F5C47A;
+}
+
+.join_us a:last-child {
+  background-color: transparent;
+  color: #D4B896;
+  border: 1px solid #D4B896;
+}
+
+.join_us a:last-child:hover {
+  background-color: #D4B896;
+  color: #6B3F2A;
 }
 
 a:hover {
   font-weight: 700;
+  color: #6B3F2A;
 }
 
 .differences {
@@ -69,7 +104,7 @@ a:hover {
 .differences li {
   width: 100%;
   padding: 20px 30px;
-  border: 1px solid #e5d8ca;
+  border: 1px solid #e8d5c0;
   border-radius: 12px;
   background-color: #fff;
 }
@@ -77,14 +112,14 @@ a:hover {
 h2 {
   font-size: 36px;
   font-weight: 700;
-  color: #9f6749;
+  color: #7A6050;
   margin-bottom: 20px;
 }
 
 h3 {
   font-size: 24px;
   font-weight: 700;
-  color: #9f6749;
+  color: #7A6050;
   margin-bottom: 5px;
 }
 
@@ -124,9 +159,9 @@ h4 {
   width: -moz-fit-content;
   width: fit-content;
   background-color: #bd720b;
-  border: 1px solid #000;
   border-radius: 12px;
   padding: 10px 15px;
   font-size: 16px;
   font-weight: 700;
+  color: #7A6050;
 }/*# sourceMappingURL=main_page.css.map */
