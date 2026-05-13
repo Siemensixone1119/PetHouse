@@ -450,7 +450,8 @@ main {
   margin: 0 0 24px;
   color: #6B3F2A;
   font-family: "GeorgiaCustom", Georgia, serif;
-  font-size: 22px;
+  font-size: 28px;
+  font-weight: 600;
 }
 
 .lost-form {
@@ -488,6 +489,7 @@ main {
 }
 .lost-form__field textarea {
   min-height: 110px;
+  max-height: 300px;
   resize: vertical;
 }
 .lost-form__field input:focus, .lost-form__field textarea:focus {
