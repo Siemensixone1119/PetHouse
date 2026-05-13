@@ -1,6 +1,6 @@
 const form = document.querySelector(".register__form");
 
-form.addEventListener('submit', registerValidate)
+form.addEventListener('submit', submitForm)
 
 function registerValidate() {
   const errors = {};
@@ -14,7 +14,7 @@ function registerValidate() {
   }
 
   if (email === '') {
-    errors.email = 'Почта не может быть пустоц'
+    errors.email = 'Почта не может быть пустой'
   } else if (!email.includes('@')) {
     errors.email = ' Некорректный формат почты'
   }
@@ -32,11 +32,29 @@ function clearErrors() {
   errorElements.forEach((element) => {
     element.textContent = '';
   });
-
-  lostFormMessage.textContent = '';
-  lostFormMessage.className = 'form__message';
 }
 
-function submitForm() {
+function showErrors(errors) {
+  Object.keys(errors).forEach((fieldName) => {
+    const errorElement = document.querySelector(`[data-error="${fieldName}"]`);
 
+    if (errorElement) {
+      errorElement.textContent = errors[fieldName];
+    }
+  });
+}
+
+function submitForm(event) {
+  event.preventDefault();
+
+  clearErrors();
+
+  const errors = registerValidate();
+
+  if (Object.keys(errors).length > 0) {
+    showErrors(errors);
+    return;
+  }
+
+  window.location.href = 'index.html';
 }

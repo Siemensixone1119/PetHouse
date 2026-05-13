@@ -187,3 +187,25 @@
     }
   }
 }
+
+.lost-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 190px;
+  padding: 11px 6px;
+  background-color: #F5C47A;
+  color: #3D2B1F;
+  border: 1px solid #F5C47A;
+  border-radius: 12px;
+  font-size: 16px;
+  font-family: "GeorgiaCustom", Georgia, serif;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.lost-button:hover {
+  color: #F5C47A;
+  background-color: #3D2B1F;
+  border: 1px solid #F5C47A;
+}
