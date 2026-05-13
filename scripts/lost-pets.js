@@ -60,37 +60,27 @@ lostPetForm.addEventListener('submit', async (event) => {
   clearErrors();
 
   const formData = new FormData(lostPetForm);
+  const response = await fetch('./php/add-lost-pet.php', {
+    method: 'POST',
+    body: formData,
+  });
 
-  try {
-    const response = await fetch('./php/add-lost-pet.php', {
-      method: 'POST',
-      body: formData,
-    });
+  const result = await response.json();
 
-    const result = await response.json();
-
-    if (!result.success) {
-      showErrors(result.errors);
-
-      lostFormMessage.textContent = 'Исправьте ошибки в форме.';
-      lostFormMessage.classList.add('is-error');
-
-      return;
-    }
-
-    addLostPetCard(result.pet);
-
-    lostFormMessage.textContent = 'Объявление успешно добавлено!';
-    lostFormMessage.classList.add('is-success');
-
-    lostPetForm.reset();
-
-    setTimeout(() => {
-      closeModal();
-      clearErrors();
-    }, 1000);
-  } catch (error) {
-    lostFormMessage.textContent = 'Ошибка соединения с сервером.';
+  if (!result.success) {
+    showErrors(result.errors);
+    lostFormMessage.textContent = 'Исправьте ошибки в форме.';
     lostFormMessage.classList.add('is-error');
+    return;
   }
+
+  addLostPetCard(result.data);
+  lostFormMessage.textContent = 'Объявление успешно добавлено!';
+  lostFormMessage.classList.add('is-success');
+  lostPetForm.reset();
+
+  setTimeout(() => {
+    closeModal();
+    clearErrors();
+  }, 1000);
 });

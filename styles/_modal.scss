@@ -1,0 +1,189 @@
+@use "./variables" as *;
+
+.modal {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+
+  display: none;
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px;
+
+
+  &.is-open {
+    display: flex;
+  }
+
+  &__overlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.55);
+  }
+
+  &__content {
+    position: relative;
+    z-index: 1;
+
+    width: min(100%, 560px);
+    max-height: 90vh;
+    overflow-y: auto;
+
+    padding: 32px;
+    background-color: #fffdf9;
+    border-radius: 18px;
+  }
+
+  &__close {
+    position: absolute;
+    top: 16px;
+    right: 18px;
+
+    background: none;
+    border: none;
+
+    font-size: 32px;
+    line-height: 1;
+    cursor: pointer;
+  }
+
+  &__title {
+    margin: 0 0 24px;
+    color: $color-brown-dark;
+    font-family: $font-title;
+    font-size: 22px;
+  }
+}
+
+
+.lost-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  &__field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  &__field label {
+    font-weight: 700;
+    color: $color-brown-dark;
+  }
+
+  &__field input,
+  &__field textarea {
+    width: 100%;
+    padding: 13px 15px;
+
+    border: 1px solid $color-bg-border;
+    border-radius: 12px;
+    outline: none;
+
+    font-family: inherit;
+    font-size: 16px;
+  }
+
+  &__field textarea {
+    min-height: 110px;
+    resize: vertical;
+  }
+
+  &__field input:focus,
+  &__field textarea:focus {
+    border-color: $color-gold;
+  }
+
+  &__message {
+    margin: 0;
+    font-weight: 700;
+  }
+
+  &__message.is-error {
+    color: $color-error;
+  }
+
+  &__message.is-success {
+    color: #2f8f46;
+  }
+
+  &__button {
+    padding: 14px 24px;
+
+    background-color: $color-gold;
+    color: $color-brown-dark;
+    border: 1px solid $color-gold;
+    border-radius: 12px;
+
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+
+    transition: 0.3s ease;
+  }
+
+  &__button:hover {
+    background-color: transparent;
+    color: $color-gold;
+  }
+}
+
+.lost-board {
+  padding: 60px 0;
+
+  &__head {
+    margin-bottom: 28px;
+  }
+
+  &__title {
+    margin: 0 0 10px;
+    color: $color-brown-dark;
+  }
+
+  &__text {
+    margin: 0;
+    color: $color-brown-light;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  &__item {
+    padding: 24px;
+
+    background-color: #fff;
+    border: 1px solid $color-bg-border;
+    border-radius: 16px;
+  }
+
+  &__item-title {
+    margin: 0 0 10px;
+    color: $color-brown-dark;
+  }
+
+  &__item-text {
+    margin: 0 0 8px;
+    color: $color-brown-light;
+  }
+
+  &__item-contact {
+    margin: 14px 0 0;
+    font-weight: 700;
+    color: $color-brown-dark;
+  }
+
+  @media (max-width: 768px) {
+    &__list {
+      grid-template-columns: 1fr;
+    }
+  }
+}
