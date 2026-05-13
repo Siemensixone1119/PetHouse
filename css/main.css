@@ -521,18 +521,22 @@ main {
 }
 
 .lost-board {
-  padding: 60px 0;
+  margin-top: 40px;
 }
 .lost-board__head {
   margin-bottom: 28px;
 }
 .lost-board__title {
-  margin: 0 0 10px;
-  color: #6B3F2A;
+  font-size: 36px;
+  font-weight: 700;
+  color: #7A6050;
+  margin-bottom: 20px;
 }
 .lost-board__text {
-  margin: 0;
-  color: #D4B896;
+  font-size: 24px;
+  font-weight: 700;
+  color: #7A6050;
+  margin-bottom: 5px;
 }
 .lost-board__list {
   display: grid;
@@ -551,6 +555,8 @@ main {
 .lost-board__item-title {
   margin: 0 0 10px;
   color: #6B3F2A;
+  font-size: 18px;
+  font-weight: 600;
 }
 .lost-board__item-text {
   margin: 0 0 8px;

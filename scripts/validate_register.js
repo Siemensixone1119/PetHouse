@@ -8,6 +8,8 @@ function registerValidate() {
   const login = form.login.value.trim()
   const email = form.email.value.trim()
   const password = form.password.value.trim()
+  const emailValidator = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+  const passwordValidator = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*\W).{8,}$/;
 
   if (login === '') {
     errors.login = 'Логин не может быть пустым'
@@ -15,12 +17,14 @@ function registerValidate() {
 
   if (email === '') {
     errors.email = 'Почта не может быть пустой'
-  } else if (!email.includes('@')) {
+  } else if (!emailValidator.test(String(email).toLowerCase())) {
     errors.email = ' Некорректный формат почты'
   }
 
   if (password === '') {
     errors.password = 'Пароль не может быть пустым'
+  } else if (!passwordValidator.test(String(password))) {
+    errors.password = 'Пароль должен сожержать минимум одну строчную и заглавную букву, цыфры и спецсимволы, в сумме не менее 8 символов'
   }
 
   return errors;

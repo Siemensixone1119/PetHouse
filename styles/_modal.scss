@@ -131,20 +131,24 @@
 }
 
 .lost-board {
-  padding: 60px 0;
+  margin-top: 40px;
 
   &__head {
     margin-bottom: 28px;
   }
 
   &__title {
-    margin: 0 0 10px;
-    color: $color-brown-dark;
+    font-size: 36px;
+    font-weight: 700;
+    color: $color-brown-muted;
+    margin-bottom: 20px;
   }
 
   &__text {
-    margin: 0;
-    color: $color-brown-light;
+    font-size: 24px;
+    font-weight: 700;
+    color: $color-brown-muted;
+    margin-bottom: 5px;
   }
 
   &__list {
@@ -168,6 +172,8 @@
   &__item-title {
     margin: 0 0 10px;
     color: $color-brown-dark;
+    font-size: 18px;
+    font-weight: 600;
   }
 
   &__item-text {
