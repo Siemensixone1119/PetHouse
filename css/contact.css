@@ -48,3 +48,182 @@
 .office-card__text {
   font-size: 18px;
 }
+
+.modal {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.modal.is-open {
+  display: flex;
+}
+
+.modal__overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.55);
+}
+
+.modal__content {
+  position: relative;
+  z-index: 1;
+  width: min(100%, 560px);
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 32px;
+  background-color: #fffdf9;
+  border-radius: 18px;
+}
+
+.modal__close {
+  position: absolute;
+  top: 16px;
+  right: 18px;
+  background: none;
+  border: none;
+  font-size: 32px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.modal__title {
+  margin: 0 0 24px;
+  color: #6B3F2A;
+  font-family: "GeorgiaCustom", Georgia, serif;
+  font-size: 22px;
+}
+
+.lost-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.lost-form__field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.lost-form__field label {
+  font-weight: 700;
+  color: #6B3F2A;
+}
+
+.lost-form__field input,
+.lost-form__field textarea {
+  width: 100%;
+  padding: 13px 15px;
+  border: 1px solid #e8d5c0;
+  border-radius: 12px;
+  outline: none;
+  font-family: inherit;
+  font-size: 16px;
+}
+
+.lost-form__field textarea {
+  min-height: 110px;
+  resize: vertical;
+}
+
+.lost-form__field input:focus,
+.lost-form__field textarea:focus {
+  border-color: #F5C47A;
+}
+
+.lost-form__error {
+  min-height: 18px;
+  font-size: 14px;
+  color: #c0392b;
+}
+
+.lost-form__message {
+  margin: 0;
+  font-weight: 700;
+}
+
+.lost-form__message.is-error {
+  color: #c0392b;
+}
+
+.lost-form__message.is-success {
+  color: #2f8f46;
+}
+
+.lost-form__button {
+  padding: 14px 24px;
+  background-color: #F5C47A;
+  color: #6B3F2A;
+  border: 1px solid #F5C47A;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.lost-form__button:hover {
+  background-color: transparent;
+  color: #F5C47A;
+}
+
+.lost-board {
+  padding: 60px 0;
+}
+
+.lost-board__head {
+  margin-bottom: 28px;
+}
+
+.lost-board__title {
+  margin: 0 0 10px;
+  color: #6B3F2A;
+}
+
+.lost-board__text {
+  margin: 0;
+  color: #D4B896;
+}
+
+.lost-board__list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.lost-board__item {
+  padding: 24px;
+  background-color: #fff;
+  border: 1px solid #e8d5c0;
+  border-radius: 16px;
+}
+
+.lost-board__item-title {
+  margin: 0 0 10px;
+  color: #6B3F2A;
+}
+
+.lost-board__item-text {
+  margin: 0 0 8px;
+  color: #D4B896;
+}
+
+.lost-board__item-contact {
+  margin: 14px 0 0;
+  font-weight: 700;
+  color: #6B3F2A;
+}
+
+@media (max-width: 768px) {
+  .lost-board__list {
+    grid-template-columns: 1fr;
+  }
+}
